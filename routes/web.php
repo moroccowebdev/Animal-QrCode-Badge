@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('/');
 
 Route::get('/login', [Authentication::class, 'login'])->name('login');
 Route::get('/register', [Authentication::class, 'register'])->name('register');
@@ -36,3 +36,17 @@ Route::get('/reset_password', [ForgotController::class, 'sendEmail'])->name('res
 
 Route::get('/Change/password/{id}', [ForgotController::class, 'Change_view'])->name('Change_view');
 Route::get('change-password/{id}', [ForgotController::class, 'ChangePassword'])->name('Change_Password');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/animalProfile', function () {
+    return view('animalProfile');
+})->name('animalProfile');
+
+Route::get('/howToUse', function () {
+    return view('howToUse');
+})->name('howToUse');
+
+
