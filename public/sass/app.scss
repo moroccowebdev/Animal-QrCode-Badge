@@ -120,9 +120,23 @@ header {
         font-family: $textFont;
         font-size: calc($textSize + .2rem);
         padding: 1rem;
+        position: relative;
 
         @include tablet() {
             padding: 1.1rem;
+        }
+
+        .logo {
+            img {
+                width: 100%;
+
+            }
+            @include tablet() {
+                width: 10%;
+            }
+            @include mobile() {
+                width: 17%;
+            }
         }
 
 
@@ -191,6 +205,11 @@ header {
 
             @include tablet() {
                 display: block;
+                padding-top: 7px;
+
+            }
+            @include mobile() {
+                padding-top: 10px;
             }
         }
 
@@ -210,6 +229,12 @@ header {
             a {
                 color: #fafafa;
             }
+
+            @include tablet() {
+                top: 100%;
+                bottom: 0;
+            }
+
         }
     }
     .sticky-header {
