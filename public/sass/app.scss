@@ -83,7 +83,7 @@ $mobileWidth: 34em;
     }
 
     @include mobile() {
-        width: 25%;
+        width: 5%;
     }
 }
 
@@ -123,6 +123,7 @@ header {
 
         @include tablet() {
             padding: 1.1rem;
+            justify-content: center;
         }
 
 
@@ -188,9 +189,11 @@ header {
             font-size: calc($textSize + 1rem);
             cursor: pointer;
             display: none;
+            
 
             @include tablet() {
                 display: block;
+                margin: 10px;
             }
         }
 
@@ -206,6 +209,10 @@ header {
             justify-content: center;
             align-items: center;
             background-color: $dark;
+            
+            @include mobile() {
+                top: 5%;
+            }
 
             a {
                 color: #fafafa;

@@ -42,30 +42,32 @@ class Authentication extends Controller
             'lastname' => 'required|string',
             'email' => 'required|email',
             'password' => 'required',
+            'cpassword' => 'required',
             'phone' => 'required',
             // 'profile' => 'required|mimes : png,jpeg,jpg | max : 10000'
         ]);
-    
-        // changing profile name if it's exist
-        
         // changing profile name if it's exist
         $profile = Str::random(10) .'.'. $request->file('profile')->getClientOriginalExtension();
         // store image in storage foalder
         $request->profile->storeAs('users_profile', $profile, 'public');
         
-        // 'password' => Hash::make($request->password)
-        // get all data in $data
-        $data = [
-            'firstname' => $request->firstname,
-            'lastname' => $request->lastname,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'phone' => $request->phone,
-            'profile' => $profile
-        ];
-        // add data to database 
-        User::create($data);
-        return to_route('login')->with('success', 'User created Successfully');
+        if ($request->password == $request->cpassword) {
+            // get all data in $data
+            $data = [
+                'firstname' => $request->firstname,
+                'lastname' => $request->lastname,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'phone' => $request->phone,
+                'profile' => $profile
+            ];
+            // add data to database 
+            User::create($data);
+            return to_route('login')->with('success', 'User created Successfully');
+        }else {
+            return redirect()->back()->with('error', 'the password does not match!!');
+        }
+        return to_route('login')->with('error', 'You already have an account!!');
     }
 
 

@@ -37,6 +37,13 @@
               <label for="pwd" class="form-label">Password:</label>
               <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
             </div>
+            <div class="mb-3">
+                <label for="pwd" class="form-label">Confirm Password:</label>
+                <input type="password" class="form-control" id="password" placeholder="Confirm password" name="cpassword">
+                <div>
+                    <p class="text-danger">{{Session::get('error')}}</p>
+                </div>
+              </div>
             <button type="submit" class="btn btn-dark">Register</button>
             <a href="{{route('login')}}">Do you have an account?</a>
           </form> 
