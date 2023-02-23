@@ -20,7 +20,7 @@
             </a>
             <ul class="navBar__navList hover">
                 <li><a href="{{ route('/') }}">Home</a></li>
-                <li><a href="{{ route('about') }}">About me</a></li>
+                <li><a href="{{ route('about') }}">About Us</a></li>
                 <li><a href="{{ route('howToUse') }}">How to use</a></li>
                 <li><a href="#">Contact me</a></li>
             </ul>
@@ -30,9 +30,9 @@
             </div>
             <ul class="navBar__navList">
                 <li>
-                    <a href="#">
-                        Login 
-                        <ion-icon name="person-circle-outline"></ion-icon>    
+                    <a href="{{route('login')}}">
+                        Login
+                        <ion-icon name="person-circle-outline"></ion-icon>
                     </a>
                 </li>
             </ul>
@@ -56,7 +56,7 @@
                     <ion-icon class="ion-icon" name="logo-facebook"></ion-icon>
                 </a>
                 <a href="#">
-                    <ion-icon class="ion-icon" name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-tiktok"></ion-icon>
                 </a>
             </div>
             <div class="footer__copyright">

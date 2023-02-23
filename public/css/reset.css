@@ -1,0 +1,21 @@
+body {
+    color: white;
+    background-color: #18181b;
+}
+.reset{
+    background-color: #facc15;
+    margin-top: 150px;
+    color: black;
+    font-size: 20px;
+    border-radius: 15px;
+}
+.input {
+    border: 3px solid #8a8a24;
+    box-shadow: 7px 8px 15px black;
+    width: 75%;
+    border-radius: 10px;
+}
+
+.text {
+    text-shadow: 3px 2px 10px #b79f32;
+}
