@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnimalQrCode;
 use App\Http\Controllers\Authentication;
 use App\Http\Controllers\ForgotController;
 use App\Http\Controllers\SendMail;
@@ -21,18 +22,17 @@ Route::get('/', function () {
     return view('home');
 })->name('/');
 
-// authentification
+// authentication
 Route::get('/login', [Authentication::class, 'login'])->name('login');
 Route::get('/register', [Authentication::class, 'register'])->name('register');
-Route::post('/signin', [Authentication::class, 'signIn'])->name('signin');
+Route::post('/signIn', [Authentication::class, 'signIn'])->name('signin');
 Route::post('/add-user', [Authentication::class, 'store'])->name('User_store');
 
 Route::resource('users', UserController::class)->middleware('auth, admin');
 
 
-
 // send Forgot Email
-Route::get('/forgot-password', [ForgotController::class, 'resetPassword'])->name('password_reset');
+Route::get('/forgot_password', [ForgotController::class, 'resetPassword'])->name('password_reset');
 Route::get('/reset_password', [ForgotController::class, 'sendEmail'])->name('reset_password');
 
 // Change Password
@@ -56,3 +56,4 @@ Route::get('/howToUse', function () {
 })->name('howToUse');
 
 
+Route::get('/tag/{id}', [AnimalQrCode::class, 'findQrId']);

@@ -15,7 +15,9 @@
 <body>
     <header>
         <nav class="navBar">
-                <img class="logo" src="{{ asset('pet-tag-logo.png') }}" alt="logo" />
+            <a href="{{ route('/') }}" class="logo">
+                <img src="{{ asset('pet-tag-logo.png') }}" alt="logo" />
+            </a>
             <ul class="navBar__navList hover">
                 <li><a href="{{ route('/') }}">Home</a></li>
                 <li><a href="{{ route('about') }}">About Us</a></li>

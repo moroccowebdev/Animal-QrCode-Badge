@@ -29,7 +29,7 @@ class ForgotController extends Controller
         }
         return redirect()->back()->with('error', 'Whoops! Something went wrong!');
     }
-    // rettrns the view 
+    // returns the view 
     public function Change_view(Request $request, $user)
     {
         return view('auth.changePassword', compact('user'));

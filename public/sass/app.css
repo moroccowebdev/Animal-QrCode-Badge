@@ -47,7 +47,7 @@
 }
 @media screen and (max-width: 34em) {
   .logo {
-    width: 25%;
+    width: 5%;
   }
 }
 
@@ -91,11 +91,29 @@ header .navBar {
   font-family: "Cairo", sans-serif;
   font-size: 1.2rem;
   padding: 1rem;
+  position: relative;
   /************* started menu bar *************/
 }
 @media screen and (max-width: 55em) {
   header .navBar {
     padding: 1.1rem;
+    justify-content: center;
+  }
+}
+header .navBar .logo {
+  width: 3%;
+}
+header .navBar .logo img {
+  width: 100%;
+}
+@media screen and (max-width: 55em) {
+  header .navBar .logo {
+    width: 10%;
+  }
+}
+@media screen and (max-width: 34em) {
+  header .navBar .logo {
+    width: 17%;
   }
 }
 header .navBar__navList {
@@ -159,6 +177,11 @@ header .navBar__menu {
     display: block;
   }
 }
+@media screen and (max-width: 34em) {
+  header .navBar__menu {
+    padding-top: 10px;
+  }
+}
 header .navBar .responsive-navList {
   position: absolute;
   width: 100%;
@@ -172,8 +195,19 @@ header .navBar .responsive-navList {
   align-items: center;
   background-color: #18181b;
 }
+@media screen and (max-width: 34em) {
+  header .navBar .responsive-navList {
+    top: 5%;
+  }
+}
 header .navBar .responsive-navList a {
   color: #fafafa;
+}
+@media screen and (max-width: 55em) {
+  header .navBar .responsive-navList {
+    top: 100%;
+    bottom: 0;
+  }
 }
 header .sticky-header {
   position: fixed;
