@@ -49,7 +49,7 @@
             <button type="submit" class="btn btn-dark">Login</button>
             <a href="{{route('register')}}">Create Account?</a>
             <a href="{{route('password_reset')}}">Forgot Password?</a>
-            </form> 
+        </form> 
     </div>
 </body>
 </html>
