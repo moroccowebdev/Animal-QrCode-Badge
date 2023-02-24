@@ -124,7 +124,19 @@ header {
 
         @include tablet() {
             padding: 1.1rem;
-            justify-content: center;
+        }
+
+        .logo {
+            img {
+                width: 100%;
+
+            }
+            @include tablet() {
+                width: 10%;
+            }
+            @include mobile() {
+                width: 17%;
+            }
         }
 
         .logo {

@@ -18,12 +18,9 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'firstname',
-        'lastname',
+        'name',
         'password',
-        'profile',
-        'email',
-        'phone'
+        'email'
     ];
 
     public function animal()
