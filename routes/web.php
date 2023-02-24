@@ -55,5 +55,9 @@ Route::get('/howToUse', function () {
     return view('howToUse');
 })->name('howToUse');
 
+// product page
+Route::get('/tagProduct', function () {
+    return view('productPage');
+})->name('productPage');
 
 Route::get('/tag/{id}', [AnimalQrCode::class, 'findQrId']);

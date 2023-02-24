@@ -23,6 +23,7 @@
                 <li><a href="{{ route('about') }}">About Us</a></li>
                 <li><a href="{{ route('howToUse') }}">How to use</a></li>
                 <li><a href="#">Contact me</a></li>
+                <li><a href="{{ route('productPage') }}">Shop</a></li>
             </ul>
             {{-- menu bar --}}
             <div class="navBar__menu">
