@@ -1,0 +1,401 @@
+* {
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* =============== == TITLE == ================ */
+
+.title{
+    background-image: url("../images_design/as-min.jpg");
+    height: 40rem;
+    background-size: cover;
+    /* background-position: 130%; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.title h1{
+    font-size: 600%;
+    color: #F9D71B;
+    /* color: #e6e3d5; */
+    font-weight: bold;
+    text-shadow: 9px 8px 20px black;
+}
+.title:hover h1{
+
+    text-shadow: 1px 1px 50px white;
+}
+.btn-outline-warning {
+    color: #ffc107;
+    box-shadow: 5px 9px 20px #2c2100;
+    border-color: #ffc107;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    margin-top: 70px;
+    /* overflow: hidden; */
+
+    /* height: 12rem; */
+}
+.wave img{
+    width: 100%;
+}
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width: 768px) {
+    .title{
+        background-image: url("../images_design/as-min.jpg");
+        height: 30rem;
+        background-size: cover;
+        background-position: 130%;
+        width: 100%;
+    }
+    .wave{
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%;
+        margin-top: -190px;
+        /* height: 12rem; */
+    }
+    .wave img {
+        width: 100%;
+        margin-top: -380px;
+        height: 5rem;
+    }
+}
+/* Phone size */
+
+@media only screen and (max-width: 600px) {
+    .title{
+        background-image: url("../images_design/as-min.jpg");
+        height: 30rem;
+        background-size:cover;
+        background-position: 90%;
+        /* width: 100%; */
+        background-repeat: no-repeat;
+    }
+    .title h1{
+        color: #fbfbf8;
+        font-size: 300%;
+    }
+    .wave img {
+        width: 100%;
+        margin-top: -860px;
+        height: 5rem;
+    }
+
+    /* Testing photos dogs */
+    .testing img{
+        margin-left: 0px;
+
+    }
+    .testing:hover img{
+        transform: scale(1.1);
+        /* border-radius:   58% 93% 20% 42% / 79% 51% 81% 30%; */
+        margin-left: -30px;
+    }
+
+
+}
+
+
+.hedT {
+    text-align: center;
+}
+
+/* =============== == END ==TITLE == ================ */
+/* ================= contact ================ */
+
+.test{
+    margin: 20px;
+    margin-right: -35px;
+    /* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); */
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 33% 100%, 57% 47%, 32% 0);
+    width: 50px;
+    height: 60px;
+    background-color: #F9D71B;
+}
+.testr{
+    margin: 20px;
+    margin-right: -35px;
+    /* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); */
+    clip-path: polygon(69% 0, 35% 50%, 71% 100%, 25% 100%, 0 50%, 25% 0%);
+    /* clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 33% 100%, 57% 47%, 32% 0); */
+    width: 50px;
+    height: 60px;
+    background-color: #F9D71B;
+}
+
+.p1{
+    background-color: #fafafa;
+}
+
+
+
+/* contact */
+
+.contact{
+    background: #f1e1d2;
+}
+/* .contact .heading{
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    padding: 1.2rem 0;
+} */
+.contact form{
+    padding: 2rem 10%;
+    text-align: center;
+}
+
+.contact form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact form .inputBox input,
+.contact form textarea{
+    font-size: 1.7rem;
+    width: 49%;
+    padding: 0.8rem 2rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 0.5rem;
+    text-transform: none;
+}
+.contact form .inputBox input[type='email']{
+    width: 100%;
+}
+.contact form .inputBox input[type='number']{
+    width: 100%;
+}
+
+.contact form .inputBox input::placeholder,
+.contact form textarea::placeholder{
+    text-transform: capitalize;
+}
+
+.contact form textarea{
+    height: 10rem;
+    resize: none;
+    width: 100%;
+}
+
+  /* end */
+
+/* @media (min-width: 768px){
+    html{
+    font-size: 50%;
+    }
+
+} */
+
+
+.btnF{
+    font-size: 1.7rem;
+    display: inline-block;
+    background: #ff6e01;
+    color: #fff;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 5rem;
+    padding: 0.9rem 3rem;
+    margin-top: 1rem;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.btnF::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: rgb(255, 167, 15);
+    color: #e6e3d5;
+    z-index: -1;
+    transition: .3s linear;
+    left: 0;
+}
+
+.btnF:hover::before{
+    width: 100%;
+}
+/* @media only screen and (max-width: 600px) {
+    .contact form .inputBox input,
+    .contact form textarea{
+        font-size: 1.7rem;
+        width: 100%;
+        padding: 0.8rem 2rem;
+        margin: 1rem 0;
+        border: none;
+        border-radius: 0.5rem;
+        text-transform: none;
+    }
+    .contact form .inputBox input[type='email']{
+        width: 100%;
+    }
+    .contact form .inputBox input[type='number']{
+        width: 100%;
+    }
+} */
+
+@media only screen and (max-width: 768px) {
+    .contact form .inputBox input,
+    .contact form textarea{
+        font-size: 1.4rem;
+        width: 100%;
+        padding: 0.5rem 2rem;
+        margin: 1rem 0;
+        border: none;
+        border-radius: 0.5rem;
+        text-transform: none;
+    }
+    .contact form .inputBox input[type='email']{
+        width: 100%;
+    }
+    .contact form .inputBox input[type='number']{
+        width: 100%;
+    }
+}
+
+/* ------------------ for more information --------------------- */
+.MF{
+    text-align: center;
+    width: 100%;
+}
+/* .MF h3{
+
+} */
+
+/* ------ les info ----- */
+
+.contact-info{
+    padding: 30px 20px;
+    background-color: #cecfc1;
+    width: 60%;
+    margin: 50px auto;
+    text-decoration: none;
+    border-radius: 20px;
+}
+.contact-info div{
+    display: flex;
+    align-items: center;
+    /* width: 60%;
+    margin: 0px auto; */
+    margin-bottom: 10px;
+}
+.contact-info div span{
+    min-width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: rgb(55, 55, 151);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: 2em;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.contact-info div span .iconF{
+    font-size: 1.5em;
+}
+.contact-info div a , .contact-info div p{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #060604;
+}
+
+.contact-info ul{
+    list-style-type: none;
+    display: flex;
+    /* justify-content: center; */
+    font-size: 3em;
+    margin-top: 20px;
+}
+.contact-info ul li{
+    margin-right: 20px;
+}
+.contact-info ul li a{
+    color: rgb(55, 55, 151);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .contact-info{
+        padding: 30px 20px;
+        width: 90%;
+        margin: 50px auto;
+        text-decoration: none;
+    }
+}
+
+
+/* Photooos Dogs */
+
+.desg{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    padding: 20px 10px;
+    margin: 10px;
+    background-color: #fffbe2;
+    border-radius: 5px;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+
+
+.testing{
+    height: 19.5rem;
+    width: 19.5em;
+    margin: 50px 0px;
+    background: #f1e1d2;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 79% 51% 81% 19% / 58% 93% 7% 42%;
+    transition: 0.2s linear;
+}
+.testing img{
+    width: 130%;
+    height: 130%;
+    border-radius:   58% 93% 20% 42% / 79% 51% 81% 30%;
+    margin-left: 30px;
+    transition: 0.2s linear;
+}
+
+.testing:hover::after{
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: wheat;
+    opacity: 0.5;
+    transition: 0.5s ease;
+}
+.testing:hover img{
+    transform: scale(1.1);
+    /* border-radius:   58% 93% 20% 42% / 79% 51% 81% 30%; */
+    margin-left: -30px;
+}
+.testing:hover p{
+    transform: scale(1.1);
+    /* border-radius:   58% 93% 20% 42% / 79% 51% 81% 30%; */
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.testing:hover{
+    border-radius: .5rem;
+}
