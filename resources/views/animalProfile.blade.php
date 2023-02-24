@@ -25,9 +25,9 @@
     <section class="animalProfile">
         <div class="animalProfile__info">
             <div class="animalProfile__info__left">
-                <img src="{{ asset('zoe-gayah-jonker-uhnbTZC7N9k-unsplash.jpg') }}" alt="pet is profile">
+                <img src="{{ asset('/storage/animals/'. $animal->profile )  }}" alt="pet is profile">
                 <p>
-                    pet's name: <span>Tom</span>
+                    pet's name: <span>{{$animal->animal}}</span>
                 </p>
             </div>
             <div class="animalProfile__info__right">
@@ -42,17 +42,17 @@
                 <div class="animalProfile__info__right__owner">
                     <p>
                         Pet parent's name :
-                        <span>Ana</span>
+                        <span>{{$animal->name}}</span>
                     </p>
                     
                     <p>
                         <ion-icon name="call-outline"></ion-icon>
-                        +1(555)5551234
+                        {{$animal->phone}}
                     </p>
                 </div>
                 <p class="p-tag">
                     <ion-icon name="location-outline"></ion-icon>
-                    Share your location with the pet parent
+                    {{$animal->adress}}
                 </p>
             </div>
         </div>
@@ -78,7 +78,7 @@
     </iframe>
 
     <footer class="animalProfileFooter">
-        <p>https://pettag.com</p>
+        <p>https://tagtag.ma</p>
         <p>&copy; 2023 by pettag.com</p>
     </footer>
     {{-- JS --}}

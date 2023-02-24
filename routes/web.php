@@ -45,10 +45,6 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-// animal profile
-Route::get('/animalProfile', function () {
-    return view('animalProfile');
-})->name('animalProfile');
 
 // How to use page
 Route::get('/howToUse', function () {
@@ -56,4 +52,5 @@ Route::get('/howToUse', function () {
 })->name('howToUse');
 
 
-Route::get('/tag/{id}', [AnimalQrCode::class, 'findQrId']);
+Route::get('/tag/{id}', [AnimalQrCode::class, 'findQrId']); 
+Route::post('/add-animal', [AnimalQrCode::class, 'AddAnimal'])->name('create-animal'); 

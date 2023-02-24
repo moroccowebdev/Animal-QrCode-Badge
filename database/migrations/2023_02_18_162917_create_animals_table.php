@@ -13,10 +13,14 @@ return new class extends Migration
     {
         Schema::create('animals', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 30);
-            $table->text('adresse');
-            $table->string('profile', 30);
-            $table->foreignId('owner')->constrained('users');
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->string('phone');
+            $table->string('animal');
+            $table->text('adress');
+            $table->string('profile');
+            $table->string('qr_id');
             $table->timestamps();
         });
     }
