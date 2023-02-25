@@ -1568,3 +1568,89 @@ header {
     }
 }
 /*########################### how to use page ended ###############################*/
+
+
+/*########################### product page started ###############################*/
+
+.product {
+    margin: 4rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 85%;
+
+    &__left {
+        width: 50%;
+        img {
+            width: 100%;
+        }
+
+        @include tablet() {
+            width: 100%;
+        }
+    }
+    &__right {
+        width: 40%;
+        &__title {
+            font-size: calc($titleSize + 1rem);
+            @include tablet() {
+                font-size: $titleSize;
+            }
+            @include mobile() {
+                font-size: calc($titleSize - .7rem);
+            }
+        }
+        
+        &__price {
+            color: $yellow;
+        }
+
+        &__text {
+            margin-bottom: 3rem;
+        }
+
+        &__cta {
+            margin: 1.3rem 0 0;
+            background-color: $yellow;
+            border-radius: 42px;
+            font-family: $textFont;
+            font-size: calc($textSize + .3rem);
+            font-weight: 800;
+            border: none;
+            cursor: pointer;
+            padding: 1rem 3rem;
+            transition: transform 0.3s ease-out;
+            color: $dark;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:hover {
+                color: $white;
+                background-color: $dark;
+                transform: scale(1.1, 1);
+            }
+
+            @include mobile() {
+                margin: 1rem 0 0;
+                font-size: $textSize;
+            }
+
+        }
+
+        @include tablet() {
+            width: 95%;
+        }
+    }
+
+    @include desktop() {
+        justify-content: flex-start;
+        width: 95%;
+        gap: 1.25rem;
+    }
+
+    @include tablet() {
+        flex-direction: column;
+    }
+}
+
+/*########################### product page ended ###############################*/

@@ -97,7 +97,19 @@ header .navBar {
 @media screen and (max-width: 55em) {
   header .navBar {
     padding: 1.1rem;
-    justify-content: center;
+  }
+}
+header .navBar .logo img {
+  width: 100%;
+}
+@media screen and (max-width: 55em) {
+  header .navBar .logo {
+    width: 10%;
+  }
+}
+@media screen and (max-width: 34em) {
+  header .navBar .logo {
+    width: 17%;
   }
 }
 header .navBar .logo {
@@ -1555,4 +1567,91 @@ header .select:hover::after {
   }
 }
 
-/*########################### how to use page ended ###############################*//*# sourceMappingURL=app.css.map */
+/*########################### how to use page ended ###############################*/
+/*########################### product page started ###############################*/
+.product {
+  margin: 4rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 85%;
+}
+.product__left {
+  width: 50%;
+}
+.product__left img {
+  width: 100%;
+}
+@media screen and (max-width: 55em) {
+  .product__left {
+    width: 100%;
+  }
+}
+.product__right {
+  width: 40%;
+}
+.product__right__title {
+  font-size: 4rem;
+}
+@media screen and (max-width: 55em) {
+  .product__right__title {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 34em) {
+  .product__right__title {
+    font-size: 2.3rem;
+  }
+}
+.product__right__price {
+  color: #f9d61b;
+}
+.product__right__text {
+  margin-bottom: 3rem;
+}
+.product__right__cta {
+  margin: 1.3rem 0 0;
+  background-color: #f9d61b;
+  border-radius: 42px;
+  font-family: "Cairo", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  transition: transform 0.3s ease-out;
+  color: #18181b;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.product__right__cta:hover {
+  color: #fafafa;
+  background-color: #18181b;
+  transform: scale(1.1, 1);
+}
+@media screen and (max-width: 34em) {
+  .product__right__cta {
+    margin: 1rem 0 0;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 55em) {
+  .product__right {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 70em) {
+  .product {
+    justify-content: flex-start;
+    width: 95%;
+    gap: 1.25rem;
+  }
+}
+@media screen and (max-width: 55em) {
+  .product {
+    flex-direction: column;
+  }
+}
+
+/*########################### product page ended ###############################*//*# sourceMappingURL=app.css.map */
