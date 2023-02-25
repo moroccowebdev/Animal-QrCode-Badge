@@ -10,15 +10,24 @@ use Illuminate\Support\Facades\Hash;
 
 class AnimalQrCode extends Controller
 {
+    
     public function findQrId($id)
     {
-        // $post = Post::where('qr_id', '=', $id)->firstOrFail();
-        $animal = Animal::where('qr_id', '=', $id)->first();
-        if ($animal) {
-            return view('animalProfile', compact('animal'));
-        }else {
-            return view('animals.create', compact('id'));
+        function checkId(string $id): bool {
+            $pattern = '/^ma\d+/';
+            return preg_match($pattern, $id) === 1;
         }
+        if ( checkId($id) ) {
+            $animal = Animal::where('qr_id', '=', $id)->first();
+            if ($animal) {
+                return view('animalProfile', compact('animal'));
+            }else {
+                return view('animals.create', compact('id'));
+            }
+            } else {
+                return redirect()->back()->with('error', 'There is no Qr_id like that');
+        }
+        
     }
 
     public function AddAnimal(Request $request)
@@ -52,8 +61,17 @@ class AnimalQrCode extends Controller
                 'profile' => $profile,
                 'qr_id' => $request->qr_id,
             ];
-            // add data to database 
+            // $user = [
+            //     'name' => $request->name,
+            //     'email' => $request->email,
+            //     'password' => Hash::make($request->password)
+            // ];
+            // add data to Animal Table 
             Animal::create($animal);
+
+            // add data to user Table
+            // User::create($user);
+
             return view('animalProfile', compact('animal'))->with('success', 'your animal was created successfully');
 
         }else {
