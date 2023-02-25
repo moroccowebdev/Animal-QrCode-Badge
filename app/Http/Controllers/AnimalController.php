@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Animal;
 use App\Http\Requests\StoreAnimalRequest;
 use App\Http\Requests\UpdateAnimalRequest;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Response;
 
 class AnimalController extends Controller
 {
@@ -16,6 +14,9 @@ class AnimalController extends Controller
     public function index()
     {
         return view();
+        return view('animals.index', [
+            'animals' => Animal::all()
+        ]);
     }
 
     /**
@@ -23,7 +24,7 @@ class AnimalController extends Controller
      */
     public function create()
     {
-        //
+        return view('animals.create');
     }
 
     /**

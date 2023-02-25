@@ -9,7 +9,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Animal extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'adresse', 'profile', 'owner'];
+    protected $fillable = [
+        'name',
+        'qr_id',
+        'password',
+        'profile',
+        'email',
+        'phone',
+        'adress',
+        'animal'
+    ];
 
     public function users()
     {
