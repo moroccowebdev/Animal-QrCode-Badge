@@ -15,7 +15,7 @@
         </script>
     @endif
     <div class="product">
-        <div class="product__left">
+        <div class="product__left zoom">
             <img src="{{ asset('dan-barrett-0EhFkzIinlk-unsplash.jpg') }}" alt="...">
         </div>
         <div class="product__right">
