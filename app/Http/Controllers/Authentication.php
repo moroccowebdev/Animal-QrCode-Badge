@@ -27,15 +27,7 @@ class Authentication extends Controller
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            //-=-= Start check admin -=-=-=-=-=-=
-            $user = User::where('email','=',$credentials['email'])->first();
-            if($user['admin'] == 1){
-                return to_route('/')->with('check-admin',1);
-            }else{
-                return to_route('/')->with('check-admin',0);
-            }
-            //-=-= End check admin -=-=-=-=-=-=--=-
-            // return to_route('/');
+            return to_route('users.index');
         }
 
         return redirect()->back()->with('Error', 'Email or password is invalid');
@@ -50,6 +42,10 @@ class Authentication extends Controller
             'password' => 'required',
             'cpassword' => 'required',
         ]);
+        // changing profile name if it's exist
+        $profile = Str::random(10) .'.'. $request->file('profile')->getClientOriginalExtension();
+        // store image in storage foalder
+        $request->profile->storeAs('users_profile', $profile, 'public');
 
         if ($request->password == $request->cpassword) {
             // get all data in $data

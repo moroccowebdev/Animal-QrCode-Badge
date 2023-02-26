@@ -31,14 +31,14 @@
                 </p>
             </div>
             <div class="animalProfile__info__right">
-                <div>
+                {{-- <div>
                     <p class="p-tag">
                         Type: <span>Russian Blue</span>
                     </p>
                     <p class="p-tag">
                         Age: <span>1 year old</span>
                     </p>
-                </div>
+                </div> --}}
                 <div class="animalProfile__info__right__owner">
                     <p>
                         Pet parent's name :

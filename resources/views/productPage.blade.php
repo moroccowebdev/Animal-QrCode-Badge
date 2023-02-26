@@ -5,15 +5,17 @@
 @section('content')
 
 <section>
-    @if (Session::has('sucssess'))
+    @if (Session::has('success'))
         <script>
             Swal.fire({
-            icon: 'sucssess',
-            title: 'Congratulation',
-            text: '{{Session::get('sucssess')}}',
+                position: 'center',
+                icon: 'success',
+                title: '{{Session::get('success')}}',
+                showConfirmButton: false,
+                timer: 2000
             })
         </script>
-    @endif
+        @endif
     <div class="product">
         <div class="product__left">
             <img src="{{ asset('dan-barrett-0EhFkzIinlk-unsplash.jpg') }}" alt="...">

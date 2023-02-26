@@ -45,7 +45,7 @@ class ProductController extends Controller
                 'deliveryStatus' => 'processing'
             ]);
 
-            return redirect()->route('productPage')->with('success', 'we have received your order, we will get call you soon');
+            return to_route('productPage')->with('success', 'we have received your order, we will get call you soon');
         }
         else {
             return redirect()->route('login');
