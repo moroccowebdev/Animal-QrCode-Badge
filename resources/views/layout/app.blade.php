@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pet Tag - @yield('title')</title>
 
+    {{-- BOOTSTRAP CDN --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    {{-- SWEATALERT CDN --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     {{-- logo --}}
     <link rel="shortcut icon" href="{{ asset('pet-tag-header-logo.png') }}" type="image/x-icon">
     {{-- CSS --}}
@@ -21,15 +26,16 @@
             <ul class="navBar__navList hover">
                 <li><a href="{{ route('/') }}">Home</a></li>
                 <li><a href="{{ route('about') }}">About Us</a></li>
+
                 <li><a href="{{ route('howToUse')  }}">How to use</a></li>
                 <li><a href="{{ route('contactUs') }}">Contact me</a></li>
-                {{-- <li><a href="{{ route('dash') }}">Dashboard</a></li> --}}
                 {{-- admin dashbord --}}
                 @auth
                     @if (Auth::user()->admin === 1)
                         <li><a href="{{ route('adminDashboard') }}">Dashboard</a></li>
                     @endif
                 @endauth
+                <li><a href="{{ route('productPage') }}">Shop</a></li>
 
             </ul>
             {{-- menu bar --}}
@@ -114,5 +120,12 @@
 
     {{-- JS --}}
     <script src="{{ asset('js/main.js') }}"></script>
+
+    {{-- BOOTSTRAP SCRIPT --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    {{-- SWEATALERT SCRIPT --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 </html>

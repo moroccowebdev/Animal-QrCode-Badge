@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AnimalQrCode;
 use App\Http\Controllers\Authentication;
 use App\Http\Controllers\ForgotController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SendMail;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\AdminMiddlewar;
@@ -66,6 +67,9 @@ Route::get('/howToUse', function () {
     return view('howToUse');
 })->name('howToUse');
 
+// product page
+Route::get('/tagProduct', [ProductController::class, 'productPage'])->name('productPage');
+Route::post('/buyNow/{id}', [ProductController::class, 'cashOnDelivery'])->name('buyNow');
 
 Route::get('/tag/{id}', [AnimalQrCode::class, 'findQrId']);
 Route::post('/add-animal', [AnimalQrCode::class, 'AddAnimal'])->name('create-animal');
