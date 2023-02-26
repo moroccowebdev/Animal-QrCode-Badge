@@ -5,15 +5,6 @@
 @section('content')
 
 <section>
-    @if (Session::has('sucssess'))
-        <script>
-            Swal.fire({
-            icon: 'sucssess',
-            title: 'Congratulation',
-            text: '{{Session::get('sucssess')}}',
-            })
-        </script>
-    @endif
     <div class="product">
         <div class="product__left zoom">
             <img src="{{ asset('dan-barrett-0EhFkzIinlk-unsplash.jpg') }}" alt="...">
