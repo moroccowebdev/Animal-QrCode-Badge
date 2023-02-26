@@ -80,6 +80,9 @@ Route::post('/add-animal', [AnimalQrCode::class, 'AddAnimal'])->name('create-ani
 Route::view('adminDashboard','admin/dashboard')->name('adminDashboard');
 Route::view('admin-users','admin/users/index')->name('admin-users');
 Route::view('admin-animals','admin/animals/index')->name('admin-animals');
+Route::view('admin-orders','admin/orders/index')->name('admin-orders');
+
+// Route::get('/tagProduct', [ProductController::class, 'productPage'])->name('delivry');
 
 
 

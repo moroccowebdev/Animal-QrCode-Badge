@@ -27,7 +27,7 @@ class Authentication extends Controller
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return to_route('users.index');
+            return to_route('/');
         }
 
         return redirect()->back()->with('Error', 'Email or password is invalid');

@@ -16,7 +16,7 @@
             <div class="hedT">
                 <h1>Contact Us</h1><br>
                 <a href="#contact" class="btn btn-outline-warning">Contact</a>
-                <a href="#contact-info" class="btn btn-outline-warning">nfo</a>
+                <a href="#contact-info" class="btn btn-outline-warning">Info</a>
             </div>
         </div>
         <div class="wave">

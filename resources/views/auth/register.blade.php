@@ -18,14 +18,10 @@
                 <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
             </div>
             <div class="mb-3 mt-3">
-<<<<<<< HEAD
+
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-=======
-              <label for="email" class="form-label">Email:</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
->>>>>>> 9ca46854e43393c9cc42504cc0184cd633351b48
-            </div>
+
             <div class="mb-3">
                 <label for="pwd" class="form-label">Password:</label>
                 <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">

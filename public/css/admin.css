@@ -315,3 +315,9 @@ thead th.active,tbody td.active {
 .imgZom:hover{
     transform: scale(500%);
 }
+
+/* annule border and background of button in delevry */
+.status button {
+    border:none;
+    background-color:transparent;
+}

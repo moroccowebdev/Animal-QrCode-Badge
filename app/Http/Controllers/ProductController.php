@@ -52,4 +52,19 @@ class ProductController extends Controller
         }
 
     }
+    public function dilevered(Request $id){
+        $order = Order::where('id','=',$id);
+        // Order::update([
+        //     'userId' => $user->id,
+        //     'userName' => $request->fullname,
+        //     'userEmail' => $user->email,
+        //     'userPhone' => $request->phone,
+        //     'productTitle' => $product->title,
+        //     'productId' => $product->id,
+        //     'quantity' => $request->quantity,
+        //     'price' => $totalPrice,
+        //     // for delivery status there are two values 'processing' and 'delivered'
+        //     'deliveryStatus' => 'processing'
+        // ]);
+    }
 }

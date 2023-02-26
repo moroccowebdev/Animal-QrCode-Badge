@@ -11,6 +11,7 @@
 
     <a href="{{ route('admin-users') }}" class="btn btn-primary">Users</a>
     <a href="{{ route('admin-animals') }}" class="btn btn-success">Animals</a>
+    {{-- <a href="{{ route('admin-orders') }}" class="btn btn-success">Orders</a> --}}
 
 </body>
 </html>
