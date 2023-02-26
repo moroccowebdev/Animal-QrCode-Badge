@@ -27,13 +27,16 @@ class Authentication extends Controller
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            // Start add missage for check admin
-                // dd($credentials);
-            // End add missage for check admin
-
-            return to_route('users.index');
+            //-=-= Start check admin -=-=-=-=-=-=
+            $user = User::where('email','=',$credentials['email'])->first();
+            if($user['admin'] == 1){
+                return to_route('/')->with('check-admin',1);
+            }else{
+                return to_route('/')->with('check-admin',0);
+            }
+            //-=-= End check admin -=-=-=-=-=-=--=-
+            // return to_route('/');
         }
-
 
         return redirect()->back()->with('Error', 'Email or password is invalid');
     }
@@ -42,28 +45,18 @@ class Authentication extends Controller
 
         // validate incoming data
         $request->validate([
-            'firstname' => 'required|string',
-            'lastname' => 'required|string',
+            'name' => 'required|string',
             'email' => 'required|email',
             'password' => 'required',
             'cpassword' => 'required',
-            'phone' => 'required',
-            // 'profile' => 'required|mimes : png,jpeg,jpg | max : 10000'
         ]);
-        // changing profile name if it's exist
-        $profile = Str::random(10) .'.'. $request->file('profile')->getClientOriginalExtension();
-        // store image in storage foalder
-        $request->profile->storeAs('users_profile', $profile, 'public');
 
         if ($request->password == $request->cpassword) {
             // get all data in $data
             $data = [
-                'firstname' => $request->firstname,
-                'lastname' => $request->lastname,
+                'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
-                'phone' => $request->phone,
-                'profile' => $profile
             ];
             // add data to database
             User::create($data);
@@ -73,6 +66,4 @@ class Authentication extends Controller
         }
         return to_route('login')->with('error', 'You already have an account!!');
     }
-
-
 }

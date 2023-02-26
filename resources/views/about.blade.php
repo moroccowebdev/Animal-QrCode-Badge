@@ -1,3 +1,17 @@
+
+{{-- @if (Session::has('check-admin'))
+    @if (Session::get('check-admin') == 1)
+        @extends('layout.admin')
+    @endif
+
+@else
+    @if (Request::get('checkAdmin') || Request::get('reqCheck'))
+        @if (Request::get('checkAdmin') == 1 || Request::get('reqCheck') == 1)
+            @extends('layout.app')
+        @endif
+    @endif
+@endif --}}
+
 @extends('layout.app')
 
 @section('title', 'About page')

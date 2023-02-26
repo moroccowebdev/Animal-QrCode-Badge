@@ -17,7 +17,7 @@
                 <input type="search" placeholder="Search Data...">
                 <img src="{{ asset('images_design/search.png') }}" alt="">
             </div>
-            {{-- <div class="export__file">
+            <div class="export__file">
                 <label for="export-file" class="export__file-btn" title="Export File"></label>
                 <input type="checkbox" id="export-file">
                 <div class="export__file-options">
@@ -27,7 +27,7 @@
                     <label for="export-file" id="toCSV">CSV <img src="images/csv.png" alt=""></label>
                     <label for="export-file" id="toEXCEL">EXCEL <img src="images/excel.png" alt=""></label>
                 </div>
-            </div> --}}
+            </div>
         </section>
         <section class="table__body">
             <table>

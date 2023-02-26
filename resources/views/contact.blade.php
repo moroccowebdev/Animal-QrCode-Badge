@@ -100,7 +100,6 @@
             <img src="{{ asset('images_design/dog14.jpg') }}" alt="">
             <p>
                 <b>Joe</b>
-
             </p>
         </div>
         <div class="testing">
@@ -110,7 +109,7 @@
     </div>
     <div class="MF">
         <h3>For More Informations</h3>
-        <a href="#" class="btnF">About Us</a>
+        <a href="{{ route('about') }}" class="btnF">About Us</a>
     </div>
 
 

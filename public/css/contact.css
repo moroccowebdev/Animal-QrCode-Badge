@@ -48,6 +48,26 @@
 .wave img{
     width: 100%;
 }
+.title{
+    /* height: 500px; */
+    height: 30em;
+
+}
+.headPage{
+    position: relative;
+}
+.wave{
+    position: absolute;
+    bottom: 0px;
+}
+.wave img {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    /* margin-top: -1800px; */
+
+    /* height: 5rem; */
+}
 /* ---------------------------------------------------------------- */
 @media only screen and (max-width: 768px) {
     .title{
@@ -57,18 +77,17 @@
         background-position: 130%;
         width: 100%;
     }
-    .wave{
+    /* .wave{
         position: absolute;
         bottom: 0; left: 0;
         width: 100%;
         margin-top: -190px;
-        /* height: 12rem; */
     }
     .wave img {
         width: 100%;
         margin-top: -380px;
         height: 5rem;
-    }
+    } */
 }
 /* Phone size */
 
@@ -85,11 +104,11 @@
         color: #fbfbf8;
         font-size: 300%;
     }
-    .wave img {
+    /* .wave img {
         width: 100%;
         margin-top: -860px;
         height: 5rem;
-    }
+    } */
 
     /* Testing photos dogs */
     .testing img{
@@ -98,11 +117,65 @@
     }
     .testing:hover img{
         transform: scale(1.1);
-        /* border-radius:   58% 93% 20% 42% / 79% 51% 81% 30%; */
+        /* border-radius: 10px; */
         margin-left: -30px;
     }
+}
+/* @media screen and (max-width: 400px) {
+    .wave img {
+        width: 100%;
+        margin-top: -410px;
+        height: 5rem;
+    }
+}
+@media only screen and (width: 390px) {
+    .wave img {
+        width: 100%;
+        margin-top: -770px;
 
+        height: 5rem;
+    }
+}
+@media only screen and (width: 393px) {
+    .wave img {
+        width: 100%;
+        margin-top: -770px;
 
+        height: 5rem;
+    }
+}
+@media only screen and (width: 820px) {
+    .title{
+        height: 300px;
+
+    }
+    .wave img {
+        width: 100%;
+        margin-top: -1800px;
+
+        height: 5rem;
+    }
+} */
+@media only screen and (width: 768px) {
+    .title{
+        height: 300px;
+
+    }
+    .headPage{
+        position: relative;
+    }
+    .wave{
+        position: absolute;
+        bottom: 0px;
+    }
+    .wave img {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        /* margin-top: -1800px; */
+
+        /* height: 5rem; */
+    }
 }
 
 
@@ -387,7 +460,7 @@
 }
 .testing:hover img{
     transform: scale(1.1);
-    /* border-radius:   58% 93% 20% 42% / 79% 51% 81% 30%; */
+    border-radius: 20px;
     margin-left: -30px;
 }
 .testing:hover p{

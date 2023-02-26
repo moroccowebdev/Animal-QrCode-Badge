@@ -19,18 +19,11 @@
                 <img src="{{ asset('pet-tag-logo.png') }}" alt="logo" />
             </a>
             <ul class="navBar__navList hover">
-                <li><a href="{{ route('/') }}">Home</a></li>
-                <li><a href="{{ route('about') }}">About Us</a></li>
-                <li><a href="{{ route('howToUse')  }}">How to use</a></li>
-                <li><a href="{{ route('contactUs') }}">Contact me</a></li>
-                {{-- <li><a href="{{ route('dash') }}">Dashboard</a></li> --}}
-                {{-- admin dashbord --}}
-                @auth
-                    @if (Auth::user()->admin === 1)
-                        <li><a href="{{ route('adminDashboard') }}">Dashboard</a></li>
-                    @endif
-                @endauth
-
+                <li><a href="{{ route('/',[ 'checkAdmin' => Session::get('check-admin'), 'reqCheck' => Request::get('checkAdmin') ]) }}">Home</a></li>
+                <li><a href="{{ route('about',[ 'checkAdmin' => Session::get('check-admin'), 'reqCheck' => Request::get('checkAdmin') ]) }}">About Us</a></li>
+                <li><a href="{{ route('howToUse',[ 'checkAdmin' => Session::get('check-admin'), 'reqCheck' => Request::get('checkAdmin') ])  }}">How to use</a></li>
+                <li><a href="{{ route('contactUs',[ 'checkAdmin' => Session::get('check-admin'), 'reqCheck' => Request::get('checkAdmin') ]) }}">Contact me</a></li>
+                <li><a href="{{ route('admin-users') }}">Dashboard</a></li>
             </ul>
             {{-- menu bar --}}
             <div class="navBar__menu">

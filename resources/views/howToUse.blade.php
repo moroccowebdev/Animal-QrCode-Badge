@@ -70,7 +70,7 @@
         </div>
         <img src="{{ asset('points-y.png') }}" alt="..." class="main__first__img"/>
     </div>
-    
+
     <div class="main__second">
         <p class="text">
             With all the benefits our pet ID tags have, your animal’s safety is never in question.

@@ -8,6 +8,8 @@ use App\Http\Controllers\Authentication;
 use App\Http\Controllers\ForgotController;
 use App\Http\Controllers\SendMail;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\AdminMiddlewar;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,8 +28,10 @@ Route::get('/', function () {
 })->name('/');
 
 
+
 Route::resource('animals', AnimalController::class);
 
+// contact
 Route::get('/contact-us',[ContactController::class,'contact'])->name('contactUs');;
 Route::post('/contact-us',[ContactController::class,'sendEmail'])->name('contact');
 
@@ -52,6 +56,7 @@ Route::get('change-password/{id}', [ForgotController::class, 'ChangePassword'])-
 
 // about page
 Route::get('/about', function () {
+
     return view('about');
 })->name('about');
 
@@ -67,6 +72,10 @@ Route::post('/add-animal', [AnimalQrCode::class, 'AddAnimal'])->name('create-ani
 
 
 
-
+// admin views
+Route::view('adminDashboard','admin/dashboard')->name('adminDashboard');
 Route::view('admin-users','admin/users/index')->name('admin-users');
 Route::view('admin-animals','admin/animals/index')->name('admin-animals');
+
+
+
