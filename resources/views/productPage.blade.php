@@ -18,17 +18,24 @@
         <div class="product__left">
             <img src="{{ asset('dan-barrett-0EhFkzIinlk-unsplash.jpg') }}" alt="...">
         </div>
-        <div class="product__right">
-            <h1 class="product__right__title title">{{ $product->title }}</h1>
-            <p class="product__right__price text">{{ $product->price }} MAD</p>
-            <p class="product__right__text text">
-                {{ $product->description }}
-            </p>
-            <a href="#form" class="product__right__cta">buy Now</a>
-        </div>
+        @if ($product)
+            <div class="product__right">
+                <h1 class="product__right__title title">{{ $product->title }}</h1>
+                <p class="product__right__price text">{{ $product->price }} MAD</p>
+                <p class="product__right__text text">
+                    {{ $product->description }}
+                </p>
+                <a href="#form" class="product__right__cta">buy Now</a>
+            </div>
+        @endif
+
     </div>
     <div class="container my-5">
+        @if ($product)
         <form id="form" action="{{route('buyNow', $product->id)}}" method="post" class="card w-75 mx-auto my-5 p-5" enctype="multipart/form-data">
+        @else
+        <form id="form" action="{{route('buyNow')}}" method="post" class="card w-75 mx-auto my-5 p-5" enctype="multipart/form-data">
+        @endif
             @csrf
             <div class="my-3">
                 <label for="fullname" class="form-label">Full name</label>

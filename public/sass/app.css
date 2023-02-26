@@ -77,12 +77,12 @@ body {
 }
 
 /***************** header section started *******************/
-header {
-  /* Remove IE arrow */
-  /* Custom Select wrapper */
-  /* Arrow */
-  /* Transition */
-}
+/* header {
+    Remove IE arrow */
+    /* Custom Select wrapper */
+    /* Arrow */
+    /* Transition
+} */
 header .navBar {
   display: flex;
   justify-content: space-between;
