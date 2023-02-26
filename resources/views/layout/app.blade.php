@@ -15,6 +15,8 @@
     <link rel="shortcut icon" href="{{ asset('pet-tag-header-logo.png') }}" type="image/x-icon">
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ asset('sass/app.css') }}">
+
+    
     
 </head>
 <body>
@@ -113,11 +115,12 @@
     {{-- JS --}}
     <script src="{{ asset('js/main.js') }}"></script>
     
+    
     {{-- BOOTSTRAP SCRIPT --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     {{-- SWEATALERT SCRIPT --}}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 </html>
