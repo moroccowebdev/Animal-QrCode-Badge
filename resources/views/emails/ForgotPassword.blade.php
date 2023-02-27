@@ -16,12 +16,12 @@
 <h1>Mr {{$user->lastname}}</h1>
 
 <p>
-    We heard that you lost your tagtag password. Sorry about that! <br>
-    But don't worry! You can use the following button to reset your password: 
+    Nous avons appris que tu as perdu ton mot de passe tagtag. Nous en sommes désolés !<br>
+    Mais ne vous inquiétez pas ! Vous pouvez utiliser le bouton suivant pour réinitialiser votre mot de passe : 
 </p> <br>
-    <a href="{{route('Change_view', $user)}}" class="btn">Reset You Password</a> <br> <br>
+    <a href="{{route('Change_view', $user)}}" class="btn">Réinitialiser votre mot de passe</a> <br> <br>
 <p>
-    If you don’t use this link within 3 hours, it will expire. To get a new password reset link, <br>
-    visit: https://localhost:8000/password_reset
-    Thanks 
+    Si vous n'utilisez pas ce lien dans les 3 heures, il expirera. Pour obtenir un nouveau lien de réinitialisation du mot de passe, <br>
+    visiter : https://localhost:8000/password_reset
+    Merci.
 </p>

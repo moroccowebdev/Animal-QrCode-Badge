@@ -13,7 +13,7 @@
 <body>
     <div class="container px-5 c">
         <div class="card register">
-            <h1 class="text-center text-white text"> <b>Change Password</b> </h1>
+            <h1 class="text-center text-white text"> <b>Changeer le mot de passe</b> </h1>
             @if (Session::has('error'))
             <script>
                 Swal.fire({
@@ -26,12 +26,12 @@
             <form action="{{route('Change_Password', $user)}}" method="get">
                 @csrf
                 <div class="mb-3 mt-3">
-                    <label for="password" class="form-label text-white text">Password:</label>
-                    <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+                    <label for="password" class="form-label text-white text">mot de passe:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Entrer mot de passe" name="password">
                 </div>
                 <div class="mb-3">
-                    <label for="pwd" class="form-label text-white text">Confirm Password:</label>
-                    <input type="password" class="form-control" id="password" placeholder="confirm password" name="Cpassword">
+                    <label for="pwd" class="form-label text-white text">Confirmer le mot de passe:</label>
+                    <input type="password" class="form-control" id="password" placeholder="confirmer le mot de passe" name="Cpassword">
                 </div>
                 <button type="submit" class="btn btn-outline-warning ">Change</button>
             </form> 

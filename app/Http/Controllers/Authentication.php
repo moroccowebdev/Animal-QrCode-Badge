@@ -26,16 +26,15 @@ class Authentication extends Controller
         ]);
 
         $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {  
+        if (Auth::attempt($credentials)) {
             return to_route('/');
         }
-        
 
         return redirect()->back()->with('Error', 'Email or password is invalid');
     }
     public function store(Request $request)
     {
-        
+
         // validate incoming data
         $request->validate([
             'name' => 'required|string',
@@ -43,7 +42,11 @@ class Authentication extends Controller
             'password' => 'required',
             'cpassword' => 'required',
         ]);
-        
+        // changing profile name if it's exist
+        // $profile = Str::random(10) .'.'. $request->file('profile')->getClientOriginalExtension();
+        // store image in storage foalder
+        // $request->profile->storeAs('users_profile', $profile, 'public');
+
         if ($request->password == $request->cpassword) {
             // get all data in $data
             $data = [
@@ -51,7 +54,7 @@ class Authentication extends Controller
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
             ];
-            // add data to database 
+            // add data to database
             User::create($data);
             return to_route('login')->with('success', 'User created Successfully');
         }else {

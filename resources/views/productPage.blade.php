@@ -20,7 +20,7 @@
                 <img src="{{ asset('tag-tag.jpg') }}" alt="..."/>
             </a>
 
-            <a class="productNav__cta" href="#form">Buy now</a>
+            <a class="productNav__cta" href="#form">acheter maintenant</a>
         </nav>
 
         <div class="announcement">
@@ -45,7 +45,7 @@
             <strong>180,00 DHS</strong> <br>
             livraison gratuite & paiement a la livraison
         </p>
-        <a class="productNav__cta" href="#form">Buy now</a>
+        <a class="productNav__cta" href="#form">acheter maintenant</a>
         <br>
         <img class="productNav-main__img" src="{{ asset('IMG-20230226-WA0013.jpg') }}" alt="...">
 
@@ -84,22 +84,22 @@
             <form action="{{route('buyNow')}}" method="post" class="card w-75 mx-auto my-5 p-5" enctype="multipart/form-data">
                 @csrf
                 <div class="my-3">
-                    <label for="fullname" class="form-label">Full name</label>
-                    <input type="text" class="form-control" id="fullname" placeholder="Your fullname" name="fullname">
+                    <label for="fullname" class="form-label">Le nom complet</label>
+                    <input type="text" class="form-control" id="fullname" placeholder="Ton nom complet" name="fullname">
                 </div>
                 <div class="my-3">
                     <label for="city" class="form-label">City:</label>
-                    <input type="text" class="form-control" id="city" placeholder="Your city" name="city">
+                    <input type="text" class="form-control" id="city" placeholder="Ton ville" name="city">
                 </div>
                 <div class="my-3">
                     <label for="Tel" class="form-label">Tel:</label>
-                    <input type="text" class="form-control" id="phone" placeholder="Your phone" name="phone">
+                    <input type="text" class="form-control" id="phone" placeholder="Ton téléphone" name="phone">
                 </div>
                 <div class="my-3">
-                    <label for="quantity" class="form-label">Quantity:</label>
-                    <input type="number" class="form-control" id="quantity" placeholder="Quantity" name="quantity">
+                    <label for="quantity" class="form-label">Qunatie:</label>
+                    <input type="number" class="form-control" id="quantity" placeholder="Qunatie" name="quantity">
                 </div>
-                <button type="submit" class="mt-3 btn btn-warning">Buy Now</button>
+                <button type="submit" class="mt-3 btn btn-warning">Acheter Maintenant</button>
             </form> 
         </div>
     </section>
@@ -115,5 +115,3 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
-
-

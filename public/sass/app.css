@@ -29,12 +29,12 @@
 }
 @media screen and (max-width: 55em) {
   .text {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 55em) {
   .text {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -163,6 +163,37 @@ header .navBar__navList a ion-icon {
     font-size: 1.1rem;
   }
 }
+header .navBar__navList__child {
+  position: relative;
+}
+header .navBar__navList__child ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #18181b;
+  list-style-type: none;
+  padding: 1rem 4rem;
+  transition: all 0.3s ease-in-out;
+}
+header .navBar__navList__child ul li {
+  margin: 1rem auto;
+}
+header .navBar__navList__child ul li a {
+  color: #fafafa;
+}
+@media screen and (max-width: 55em) {
+  header .navBar__navList__child ul {
+    left: 100%;
+  }
+}
+@media screen and (max-width: 34em) {
+  header .navBar__navList__child ul {
+    left: 0;
+  }
+}
+header .navBar__navList__child:hover ul {
+  display: block;
+}
 header .navBar .hover a {
   position: relative;
   -webkit-padding-after: 0.2rem;
@@ -203,10 +234,9 @@ header .navBar__menu {
 header .navBar .responsive-navList {
   position: absolute;
   width: 100%;
-  height: 40vh;
+  height: 45vh;
   top: 10%;
   left: 0;
-  display: block;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -215,7 +245,7 @@ header .navBar .responsive-navList {
 }
 @media screen and (max-width: 34em) {
   header .navBar .responsive-navList {
-    top: 5%;
+    top: 0%;
   }
 }
 header .navBar .responsive-navList a {
@@ -288,7 +318,7 @@ header .select:hover::after {
   margin: 3rem auto;
 }
 .hero__left {
-  width: 40%;
+  width: 45%;
   background-color: #f9d61b;
   padding: 2.5rem;
 }
@@ -304,7 +334,7 @@ header .select:hover::after {
 }
 .hero__left__title {
   font-family: "Roboto", sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
 }
 @media screen and (max-width: 34em) {
@@ -1602,6 +1632,11 @@ header .select:hover::after {
 }
 @media screen and (max-width: 34em) {
   .productNav__cta {
+    padding: 0.5rem 1rem;
+  }
+}
+@media screen and (max-width: 34em) {
+  .productNav {
     padding: 0.5rem 1rem;
   }
 }

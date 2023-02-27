@@ -12,39 +12,56 @@
     {{-- SWEATALERT CDN --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     {{-- logo --}}
-    <link rel="shortcut icon" href="{{ asset('pet-tag-header-logo.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('tag-tag.jpg') }}" type="image/x-icon">
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ asset('sass/app.css') }}">
 
-    
-    
 </head>
 <body>
     <header>
         <nav class="navBar">
             <a href="{{ route('/') }}" class="logo">
-                <img src="{{ asset('pet-tag-logo.png') }}" alt="logo" />
+                <img src="{{ asset('Group-1.png') }}" alt="logo" />
             </a>
             <ul class="navBar__navList hover">
-                <li><a href="{{ route('/') }}">Home</a></li>
-                <li><a href="{{ route('about') }}">About Us</a></li>
-                <li><a href="{{ route('howToUse') }}">How to use</a></li>
-                <li><a href="#">Contact me</a></li>
-                <li><a href="{{ route('productPage') }}">Shop</a></li>
+                <li><a href="{{ route('/') }}">accueil</a></li>
+                <li>
+                    <a href="{{ route('about') }}">À propos de nous</a>
+                </li>
+
+                <li><a href="{{ route('howToUse')  }}">Comment Utiliser</a></li>
+                <li><a href="{{ route('contactUs') }}">Contactez-moi</a></li>
+                <li><a href="{{ route('productPage') }}">Boutique</a></li>
+                {{-- admin dashbord --}}
+                @auth
+                    @if (Auth::user()->admin === 1)
+                        <li class="navBar__navList__child">
+                            <a href="#">Tableau de bord</a>
+                            <ul>
+                                <li><a href="{{ route('adminUsers') }}" target="_blank">Users</a></li>
+                                <li><a href="{{ route('adminAnimals') }}" target="_blank">Animals</a></li>
+                                <li><a href="{{ route('adminOrders') }}" target="_blank">Orders</a></li>
+                            </ul>
+                        </li>
+                    @endif
+                @endauth
+
             </ul>
             {{-- menu bar --}}
             <div class="navBar__menu">
                 <ion-icon name="menu-outline"></ion-icon>
             </div>
             <ul class="navBar__navList">
-                <li>
-                    <a href="{{route('login')}}">
-                        Login
-                        <ion-icon name="person-circle-outline"></ion-icon>
-                    </a>
-                </li>
+                @auth
+                    <li>
+                        <a href="{{route('login')}}">
+                            Se connecter
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </a>
+                    </li>
+                @endauth
             </ul>
-            
+
         </nav>
     </header>
 
@@ -69,15 +86,14 @@
             </div>
             <div class="footer__copyright">
                 <p class="text">
-                    &copy; 2022 by Take Me Home Pet LLC
+                    &copy; 2022 par Tag Tag
                 </p>
             </div>
         </div>
         <ul class="footer__list">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms and Conditions</a></li>
-            <li><a href="#">Cookies Policy</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+            <li><a href="#">Conditions générales d'utilisation</a></li>
+            <li><a href="#">Politique en matière de cookies</a></li>
         </ul>
         <ul class="footer__contact">
             <li>
@@ -117,8 +133,6 @@
 
     {{-- JS --}}
     <script src="{{ asset('js/main.js') }}"></script>
-    
-    
     {{-- BOOTSTRAP SCRIPT --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

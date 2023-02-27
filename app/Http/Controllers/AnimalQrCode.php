@@ -46,7 +46,7 @@ class AnimalQrCode extends Controller
         ]);
         // changing profile name if it's exist
         $profile = Str::random(10) .'.'. $request->file('profile')->getClientOriginalExtension();
-        // store image in storage foalder
+        // store image in storage folder
         $request->profile->storeAs('animals', $profile, 'public');
         
         if ($request->password == $request->cpassword) {

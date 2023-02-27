@@ -13,6 +13,7 @@ class AnimalController extends Controller
      */
     public function index()
     {
+        return view();
         return view('animals.index', [
             'animals' => Animal::all()
         ]);

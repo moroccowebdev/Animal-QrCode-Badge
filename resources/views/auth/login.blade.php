@@ -43,12 +43,12 @@
                 <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
             </div>
             <div class="mb-3">
-                <label for="pwd" class="form-label">Password:</label>
+                <label for="pwd" class="form-label">mot de passe:</label>
                 <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
             </div>
-            <button type="submit" class="btn btn-dark">Login</button>
-            <a href="{{route('register')}}">Create Account?</a>
-            <a href="{{route('password_reset')}}">Forgot Password?</a>
+            <button type="submit" class="btn btn-dark">Se connecter</button>
+            <a href="{{route('register')}}">Créer un compte?</a>
+            <a href="{{route('password_reset')}}">Mot de passe oublié?</a>
         </form> 
     </div>
 </body>
