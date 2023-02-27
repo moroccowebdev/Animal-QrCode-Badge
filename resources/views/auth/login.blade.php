@@ -35,7 +35,7 @@
         
         <form action="{{route('signin')}}" class="card " method="post">
             <a href="/">
-                <img src="{{asset('images/logo.jpg')}}" class="logo" alt="LOGO">
+                <img src="{{asset('tag-tag.jpg')}}" class="logo" alt="LOGO">
             </a>
             @csrf
             <div class="mb-3 mt-3">

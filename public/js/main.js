@@ -63,8 +63,15 @@ backToTopButton.addEventListener("click", function() {
 });
 
 // add translate to web page
+// window.gtranslateSettings = {
+//     "default_language":"en",
+//     "languages":["en","ar"],
+//     "wrapper_selector":".gtranslate_wrapper"
+// }
+
 window.gtranslateSettings = {
-    "default_language":"en",
-    "languages":["en","ar"],
-    "wrapper_selector":".gtranslate_wrapper"
+    "default_language":"fr",
+    "languages":["fr","ar"],
+    "wrapper_selector":".gtranslate_wrapper",
+    "switcher_horizontal_position":"inline"
 }

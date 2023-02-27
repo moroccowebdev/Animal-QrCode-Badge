@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pet Tag - @yield('title')</title>
+    <title>Tag Tag - @yield('title')</title>
 
     {{-- BOOTSTRAP CDN --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -15,6 +15,8 @@
     <link rel="shortcut icon" href="{{ asset('pet-tag-header-logo.png') }}" type="image/x-icon">
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ asset('sass/app.css') }}">
+
+    
     
 </head>
 <body>
@@ -106,6 +108,9 @@
     <div class="gtranslate_wrapper"></div>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
+    {{-- <div class="gtranslate_wrapper"></div>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script> --}}
+
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -113,11 +118,12 @@
     {{-- JS --}}
     <script src="{{ asset('js/main.js') }}"></script>
     
+    
     {{-- BOOTSTRAP SCRIPT --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     {{-- SWEATALERT SCRIPT --}}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 </html>

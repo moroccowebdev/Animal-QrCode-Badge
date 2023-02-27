@@ -110,6 +110,12 @@ body {
     position: relative;
 }
 
+.gtranslate_wrapper {
+    position: fixed;
+    bottom: 1%;
+    left: 2%;
+}
+
 /***************** header section started *******************/
 header {
     .navBar {
@@ -1572,85 +1578,119 @@ header {
 
 /*########################### product page started ###############################*/
 
-.product {
-    margin: 4rem auto;
+.productNav {
+    background-color: $white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 3rem;
-    width: 85%;
+    padding: 1rem 3rem;
 
-    &__left {
-        width: 50%;
+    .logo {
         img {
             width: 100%;
         }
 
-        @include tablet() {
-            width: 100%;
-        }
-    }
-    &__right {
-        width: 40%;
-        &__title {
-            font-size: calc($titleSize + 1rem);
-            @include tablet() {
-                font-size: $titleSize;
-            }
-            @include mobile() {
-                font-size: calc($titleSize - .7rem);
-            }
-        }
-        
-        &__price {
-            color: $yellow;
-        }
-
-        &__text {
-            margin-bottom: 3rem;
-        }
-
-        &__cta {
-            margin: 1.3rem 0 0;
-            background-color: $yellow;
-            border-radius: 42px;
-            font-family: $textFont;
-            font-size: calc($textSize + .3rem);
-            font-weight: 800;
-            border: none;
-            cursor: pointer;
-            padding: 1rem 3rem;
-            transition: transform 0.3s ease-out;
-            color: $dark;
-            text-decoration: none;
-            text-transform: uppercase;
-            &:hover {
-                color: $white;
-                background-color: $dark;
-                transform: scale(1.1, 1);
-            }
-
-            @include mobile() {
-                margin: 1rem 0 0;
-                font-size: $textSize;
-            }
-
-        }
-
-        @include tablet() {
-            width: 95%;
+        @include mobile() {
+            width: 30%;
         }
     }
 
-    @include desktop() {
-        justify-content: flex-start;
-        width: 95%;
-        gap: 1.25rem;
-    }
+    &__cta {
+        background-color: $dark;
+        color: $white;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-radius: 24px;
 
-    @include tablet() {
-        flex-direction: column;
+        &:hover {
+            color: $hoverLink;
+        }
+
+        @include mobile() {
+            padding: .5rem 1rem;
+        }
     }
 }
 
+.announcement {
+    background-color: $darkYellow;
+    color: $white;
+    padding: 1rem;
+    font-size: $textSize;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    p {
+        padding-top: 1rem;
+    }
+}
+
+.productNav-main {
+    text-align: center;
+    margin: 2rem auto;
+    font-size: calc($textSize + 1rem);
+    // width: 100%;
+    &__div {
+        width: 100%;
+        // border: 1px solid $dark;
+        margin: 3rem auto;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        img {
+            width: 30%;
+            border: 10px solid $darkYellow;
+            @include tablet() {
+                width: 90%;
+                height: 500px;
+            }
+            @include mobile() {
+                width: 100%;
+                height: 300px;
+            }
+        }
+
+        @include tablet() {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    p {
+        margin: 1rem 0;
+    }
+
+    &__img {
+        width: 80%;
+        margin: 5rem auto;
+    }
+
+    &__steps {
+        margin: 3rem auto;
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            span {
+                color: $yellow;
+            }
+            p {
+                // display: inline-block;
+                background-color: $yellow;
+                margin: 1rem;
+                padding: .7rem;
+                border-radius: 24px;
+            }
+        }
+    }
+
+    @include tablet() {
+        font-size: calc($textSize + .5rem);
+    }
+    @include mobile() {
+        margin: 2rem;
+        font-size: $textSize;
+    }
+}
 /*########################### product page ended ###############################*/

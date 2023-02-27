@@ -76,6 +76,12 @@ body {
   position: relative;
 }
 
+.gtranslate_wrapper {
+  position: fixed;
+  bottom: 1%;
+  left: 2%;
+}
+
 /***************** header section started *******************/
 header {
   /* Remove IE arrow */
@@ -1569,108 +1575,118 @@ header .select:hover::after {
 
 /*########################### how to use page ended ###############################*/
 /*########################### product page started ###############################*/
-.product {
-  margin: 4rem auto;
+.productNav {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+.productNav .logo img {
+  width: 100%;
+}
+@media screen and (max-width: 34em) {
+  .productNav .logo {
+    width: 30%;
+  }
+}
+.productNav__cta {
+  background-color: #18181b;
+  color: #fafafa;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 24px;
+}
+.productNav__cta:hover {
+  color: #e4e4e7;
+}
+@media screen and (max-width: 34em) {
+  .productNav__cta {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.announcement {
+  background-color: #ca8a04;
+  color: #fafafa;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.announcement p {
+  padding-top: 1rem;
+}
+
+.productNav-main {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 2rem;
+}
+.productNav-main__div {
+  width: 100%;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.productNav-main__div img {
+  width: 30%;
+  border: 10px solid #ca8a04;
+}
+@media screen and (max-width: 55em) {
+  .productNav-main__div img {
+    width: 90%;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 34em) {
+  .productNav-main__div img {
+    width: 100%;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 55em) {
+  .productNav-main__div {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.productNav-main p {
+  margin: 1rem 0;
+}
+.productNav-main__img {
+  width: 80%;
+  margin: 5rem auto;
+}
+.productNav-main__steps {
+  margin: 3rem auto;
+}
+.productNav-main__steps div {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
-  width: 85%;
+  flex-wrap: nowrap;
 }
-.product__left {
-  width: 50%;
-  background-image: url("../dan-barrett-0EhFkzIinlk-unsplash.jpg");
-}
-.product__left img {
-  width: 100%;
-}
-.product__left figure.zoom {
-  background-position: 50% 50%;
-  position: relative;
-  margin: 150px auto;
-  border: 5px solid white;
-  box-shadow: -1px 5px 15px black;
-  height: 300px;
-  width: 500px;
-  overflow: hidden;
-  cursor: zoom-in;
-}
-.product__left .zoom img:hover {
-  opacity: 0;
-}
-.product__left .zoom img {
-  transition: opacity 0.5s;
-  display: block;
-  width: 100%;
-}
-@media screen and (max-width: 55em) {
-  .product__left {
-    width: 100%;
-  }
-}
-.product__right {
-  width: 40%;
-}
-.product__right__title {
-  font-size: 4rem;
-}
-@media screen and (max-width: 55em) {
-  .product__right__title {
-    font-size: 3rem;
-  }
-}
-@media screen and (max-width: 34em) {
-  .product__right__title {
-    font-size: 2.3rem;
-  }
-}
-.product__right__price {
+.productNav-main__steps div span {
   color: #f9d61b;
 }
-.product__right__text {
-  margin-bottom: 3rem;
-}
-.product__right__cta {
-  margin: 1.3rem 0 0;
+.productNav-main__steps div p {
   background-color: #f9d61b;
-  border-radius: 42px;
-  font-family: "Cairo", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 800;
-  border: none;
-  cursor: pointer;
-  padding: 1rem 3rem;
-  transition: transform 0.3s ease-out;
-  color: #18181b;
-  text-decoration: none;
-  text-transform: uppercase;
+  margin: 1rem;
+  padding: 0.7rem;
+  border-radius: 24px;
 }
-.product__right__cta:hover {
-  color: #fafafa;
-  background-color: #18181b;
-  transform: scale(1.1, 1);
+@media screen and (max-width: 55em) {
+  .productNav-main {
+    font-size: 1.5rem;
+  }
 }
 @media screen and (max-width: 34em) {
-  .product__right__cta {
-    margin: 1rem 0 0;
+  .productNav-main {
+    margin: 2rem;
     font-size: 1rem;
-  }
-}
-@media screen and (max-width: 55em) {
-  .product__right {
-    width: 95%;
-  }
-}
-@media screen and (max-width: 70em) {
-  .product {
-    justify-content: flex-start;
-    width: 95%;
-    gap: 1.25rem;
-  }
-}
-@media screen and (max-width: 55em) {
-  .product {
-    flex-direction: column;
   }
 }
 

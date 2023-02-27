@@ -54,7 +54,7 @@ Route::get('/howToUse', function () {
 
 // product page
 Route::get('/tagProduct', [ProductController::class, 'productPage'])->name('productPage');
-Route::post('/buyNow/{id}', [ProductController::class, 'cashOnDelivery'])->name('buyNow');
+Route::post('/buyNow', [ProductController::class, 'cashOnDelivery'])->name('buyNow');
 
 Route::get('/tag/{id}', [AnimalQrCode::class, 'findQrId']); 
 Route::post('/add-animal', [AnimalQrCode::class, 'AddAnimal'])->name('create-animal'); 
